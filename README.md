@@ -55,6 +55,8 @@ Terraform has been successfully initialized!
 ```
 
 Run terraform:
+
+```
 $ terraform apply
 data.archive_file.code: Refreshing state...
 
