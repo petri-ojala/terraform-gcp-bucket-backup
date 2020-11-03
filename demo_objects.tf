@@ -7,6 +7,10 @@ resource "google_storage_bucket_object" "demo_object_1" {
   name   = "demo_buckets.tf"
   source = "./demo_buckets.tf"
   bucket = each.value
+
+  depends_on = [
+    google_storage_bucket.source
+  ]
 }
 
 resource "google_storage_bucket_object" "demo_object_2" {
@@ -15,4 +19,8 @@ resource "google_storage_bucket_object" "demo_object_2" {
   name   = "demo_objects.tf"
   source = "./demo_objects.tf"
   bucket = each.value
+
+  depends_on = [
+    google_storage_bucket.source
+  ]
 }
